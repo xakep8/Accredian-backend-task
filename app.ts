@@ -16,6 +16,7 @@ app.post("/refer",async (req,res)=>{
         res.status(400).send("Already referred");
         return;
     }
+    
     if(referreeEmail==referrerEmail){
         res.status(400).send("Referrer and Referree cannot have same email");
         return;
